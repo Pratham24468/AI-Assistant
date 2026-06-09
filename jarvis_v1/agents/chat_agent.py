@@ -13,4 +13,8 @@ class ChatAgent:
         print("Chat Agent Initialized")
 
     def process_command(self, command):
-        pass
+        parts = command.split()
+        first_word = parts[0]
+        if first_word == "remember":
+            self.memory.remember(parts[1], parts[2])
+        
