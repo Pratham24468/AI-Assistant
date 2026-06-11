@@ -14,6 +14,7 @@ class ChatAgent:
 
     def process_command(self, command):
         parts = command.split()
+        first_word = parts[0]
         if first_word == "remember":
             self.memory.remember(parts[1], " ".join(parts[2:]))
         elif first_word == "recall":
